@@ -1,0 +1,28 @@
+a {
+    text-decoration: none;
+    color: #D7D7D7;
+    transition: 0.1s ease;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #868686;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin-left: 4rem;
+}

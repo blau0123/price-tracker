@@ -1,0 +1,24 @@
+.card-container {
+    background-color: #2A2E31;
+    border-radius: 15px;
+    padding: 20px 50px;
+    color: #D7D7D7;
+    transition: 0.5s ease;
+}
+
+.card-container:hover {
+    transform: scale(0.99);
+    cursor: pointer;
+}
+
+.item-text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.card-content {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}

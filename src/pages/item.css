@@ -1,0 +1,22 @@
+.item-container {
+    margin-top: 3rem;
+}
+
+.item-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+
+}
+
+.item-price-container {
+    font-size: 20px;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.price {
+    margin-left: 1rem;
+}

@@ -1,25 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './card.css';
-import { PriceHistoryPoint, Item } from '../types/types';
+import { ItemData } from '../types/types';
 
 interface Props {
-    item: Item
+    itemData: ItemData;
 }
 
-function renderCardContent(item: Item):JSX.Element {
+function renderCardContent(item: ItemData):JSX.Element {
     return (
-        <div className="card-content" onClick={() => window.open(item.link)}>
-            <div className="item-text">{item.itemName}</div>
-            <div className="item-text">{item.currPrice}</div>
-        </div>
+        <Link to={{pathname: `/${item.id}`, state: {itemData: item}}}>
+            <div className="card-content">
+                <div className="item-text name">{item.itemName}</div>
+                <div className={item.priceIncrease ? "item-text increased" : "item-text decreased"}>{ `$${item.currPrice}` }</div>
+            </div>
+        </Link>
     );
 }
 
-const Card: React.FC<Props> = ({item}) => {
+const Card: React.FC<Props> = ({itemData}) => {
     return(
         <div className="card-container">
             {
-                item ? renderCardContent(item) : null
+                itemData ? renderCardContent(itemData) : null
             }
         </div>
     );

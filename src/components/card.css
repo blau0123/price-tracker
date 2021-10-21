@@ -3,7 +3,9 @@
     border-radius: 15px;
     padding: 20px 50px;
     color: #D7D7D7;
-    transition: 0.5s ease;
+    transition: 0.2s ease;
+
+    margin: 10px 0;
 }
 
 .card-container:hover {
@@ -13,7 +15,8 @@
 
 .item-text {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
+    padding: 0.5rem;
 }
 
 .card-content {
@@ -21,4 +24,20 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+}
+
+.name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.increased {
+    color: #BA1E1E;
+    font-weight: 600;
+}
+
+.decreased {
+    color: #139F21;
+    font-weight: 600;
 }

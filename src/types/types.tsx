@@ -3,11 +3,13 @@ export interface PriceHistoryPoint {
     date: string;
 };
 
-export interface Item {
+export interface ItemData {
+    id: number;
     logo: string;
     link: string;
     company: string;
     itemName: string;
     currPrice: number;
     priceHistory?: PriceHistoryPoint[];
+    priceIncrease?: boolean;
 };
